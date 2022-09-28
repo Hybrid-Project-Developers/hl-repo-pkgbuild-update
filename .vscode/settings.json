@@ -1,0 +1,5 @@
+{
+    "yaml.schemas": {
+        "https://json.schemastore.org/github-workflow.json": "file:///trash/Projects/HybridLinuxISO/HybridPackages/hl-repo-pkgbuild-update/.github/workflows/build_n_upload_pkg.yml"
+    }
+}

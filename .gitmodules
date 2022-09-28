@@ -1,0 +1,6 @@
+[submodule "PortWINE"]
+	path = PortWINE
+	url = https://github.com/Castro-Fidel/PortWINE.git
+[submodule "PortProton_PKGBUILD"]
+	path = PortProton_PKGBUILD
+	url = https://github.com/Castro-Fidel/PortProton_PKGBUILD.git
