@@ -1,9 +1,6 @@
 name: hl-repo Update Action
 on: [push, pull_request]
 
-env:
-  PKGDEST: "/tmp/pkgs"
-
 jobs:
   
   check-repo-updates:
@@ -35,6 +32,8 @@ jobs:
           chown user -R /tmp
 
       - name: Build Packages
+        env:
+          PKGDEST: "/tmp/pkgs"
         uses: 2m/arch-pkgbuild-builder@v1.16
         with:
           target: 'pkgbuild'
