@@ -1,0 +1,26 @@
+name: PKGBUILD CI
+on: 
+  push:
+  workflow_dispatch:
+jobs:
+  build_portproton:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v3
+    - name: Makepkg Build and Check
+      id: makepkg
+      uses: RiverOnVenus/pkgbuild-action@new
+      with:
+          pkgdir: "PortProton_PKGBUILD"
+          namcapDisable: 1
+          makepkgArgs: "--skippgpcheck --noconfirm -s"
+    - name: Release
+      uses: ncipollo/release-action@v1.8.6
+      with:
+          allowUpdates: true
+          tag: "5.18.16-1-gcc-x86-64"
+          commit: master
+          artifacts: "./*/*.zst"
+          token: ${{ secrets.GITHUB_TOKEN }}
+  
