@@ -13,7 +13,7 @@ jobs:
       uses: RiverOnVenus/pkgbuild-action@new
       with:
           pkgdir: "PortProton_PKGBUILD @ c7b8a67"
-          namcapDisable: 1
+          namcapDisable: false
           makepkgArgs: "--skippgpcheck --noconfirm -s"
     - name: Release
       uses: ncipollo/release-action@v1.8.6
