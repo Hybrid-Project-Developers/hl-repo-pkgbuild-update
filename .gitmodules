@@ -4,3 +4,6 @@
 [submodule "PortProton_PKGBUILD"]
 	path = PortProton_PKGBUILD
 	url = https://github.com/Castro-Fidel/PortProton_PKGBUILD.git
+[submodule "openoffice-bin"]
+	path = openoffice-bin
+	url = https://aur.archlinux.org/openoffice-bin.git
