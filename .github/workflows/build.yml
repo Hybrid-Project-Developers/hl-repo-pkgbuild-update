@@ -12,7 +12,7 @@ jobs:
       id: makepkg
       uses: RiverOnVenus/pkgbuild-action@new
       with:
-          pkgdir: "PortProton_PKGBUILD @ c7b8a67"
+          pkgdir: "PortProton_PKGBUILD"
           namcapDisable: false
           makepkgArgs: "--skippgpcheck --noconfirm -s"
     - name: Release
