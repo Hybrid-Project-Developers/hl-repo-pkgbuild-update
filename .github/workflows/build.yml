@@ -1,6 +1,7 @@
 name: PKGBUILD CI
 on: 
-  push:
+  schedule:
+    - cron: '17 */12 * * *' # “At minute 17 past every 12th hour.”
   workflow_dispatch:
 jobs:
   build_portproton:
