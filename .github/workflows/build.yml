@@ -21,7 +21,7 @@ jobs:
       uses: ncipollo/release-action@v1.8.6
       with:
           allowUpdates: true
-          tag: "PortProton Latest"
+          tag: "PortProton_Latest"
           commit: main
           artifacts: "./*/*.zst"
           token: ${{ secrets.GITHUB_TOKEN }}
@@ -44,7 +44,7 @@ jobs:
       uses: ncipollo/release-action@v1.8.6
       with:
           allowUpdates: true
-          tag: "OpenOffice Latest"
+          tag: "OpenOffice_Latest"
           commit: main
           artifacts: "./*/*.zst"
           token: ${{ secrets.GITHUB_TOKEN }}
