@@ -7,3 +7,9 @@
 [submodule "openoffice-bin"]
 	path = openoffice-bin
 	url = https://aur.archlinux.org/openoffice-bin.git
+[submodule "yandex-browser"]
+	path = yandex-browser
+	url = https://aur.archlinux.org/yandex-browser.git
+[submodule "nvidia-vaapi-driver-git"]
+	path = nvidia-vaapi-driver-git
+	url = https://aur.archlinux.org/nvidia-vaapi-driver-git.git
