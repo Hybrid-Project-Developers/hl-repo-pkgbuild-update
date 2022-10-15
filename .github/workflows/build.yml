@@ -49,5 +49,51 @@ jobs:
           commit: main
           artifacts: "./*/*.zst"
           token: ${{ secrets.GITHUB_TOKEN }}
+          
+  build_yandex_browser:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v3
+      with:
+        submodules: true 
+    - name: Makepkg Build and Check
+      id: makepkg
+      uses: RiverOnVenus/pkgbuild-action@new
+      with:
+          pkgdir: "yandex-browser"
+          namcapDisable: false
+          makepkgArgs: "--skippgpcheck --noconfirm -s"
+    - name: Release
+      uses: ncipollo/release-action@v1.8.6
+      with:
+          allowUpdates: true
+          tag: "YandexBrowser_Latest"
+          commit: main
+          artifacts: "./*/*.zst"
+          token: ${{ secrets.GITHUB_TOKEN }}
   
+  build_nvidia_vaapi_driver_git:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v3
+      with:
+        submodules: true 
+    - name: Makepkg Build and Check
+      id: makepkg
+      uses: RiverOnVenus/pkgbuild-action@new
+      with:
+          pkgdir: "nvidia-vaapi-driver-git"
+          namcapDisable: false
+          makepkgArgs: "--skippgpcheck --noconfirm -s"
+    - name: Release
+      uses: ncipollo/release-action@v1.8.6
+      with:
+          allowUpdates: true
+          tag: "NvidiaVAAPI_Latest"
+          commit: main
+          artifacts: "./*/*.zst"
+          token: ${{ secrets.GITHUB_TOKEN }}
+
 
